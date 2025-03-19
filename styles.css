@@ -1,0 +1,14 @@
+body {
+    background-color: #607d8b;
+    color: white;
+}
+.navbar, footer {
+    background-color: #455a64 !important;
+}
+.card {
+    background-color: #546e7a;
+    color: white;
+}
+header {
+    background-color: rgb(96, 114, 141);
+}
