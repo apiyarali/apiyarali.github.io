@@ -17,4 +17,19 @@ h4 {
 .projects{
     padding-bottom: 15px;
 }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-body {
+    flex-grow: 1;
+}
+
+.card img{
+    height: 120px; /* Fixed height */
+    object-fit: cover; /* Crop to fit */
+}
   
