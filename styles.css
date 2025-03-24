@@ -14,10 +14,6 @@ h4 {
     padding-bottom: 10px;
 }
 
-.projects{
-    padding-bottom: 15px;
-}
-
 .card {
     display: flex;
     flex-direction: column;

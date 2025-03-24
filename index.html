@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">Ali PiyarAli</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -30,7 +30,7 @@
         <p>Software Engineer | Accountant | AI & Automation</p>
     </header>
     
-    <section id="about" class="container my-5">
+    <section id="about" class="container my-4">
         <h2>About Me</h2>
         <div>
             <p>
@@ -39,7 +39,7 @@
                 leveraging AI, automation, and big data to optimize financial performance and business operations. 
             </p>
     
-            <h4 class="mt-4 fw-bold">Key Areas of Expertise</h4>
+            <h5 class="mt-4 fw-bold">Key Areas of Expertise</h5>
             <ul class="about-list list-unstyled">
                 <li>💻 <strong>Software Engineering & RPA:</strong> Automating workflows, design solutions, and full-stack web apps with Python, Django, PostgreSQL, SQL, MongoDB & AI.</li>
                 <li>📊 <strong>Financial Modeling & Stock Prediction:</strong> AI-driven analytics for forecasting.</li>
@@ -55,92 +55,128 @@
         </div>
     </section>
     
-    <section id="projects" class="container my-5">
-        <h2 class="projects">Projects</h2>
-        <div class="row gy-4">
-            <div class="col-md-4 d-flex flex-column">
-                <div class="card border-dark">
-                    <img src="assets/drug_safety_knowledge_graph_card.jpg" class="card-img-top" alt="knowledge graph">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Drug Safety Knowledge Graph - Pfizer</h5>
-                        <p class="card-text"><strong>124,000 nodes and 68 million connections</strong></p>
-                        <p class="card-text flex-grow-1">A user-friendly knowledge graph that simplifies drug safety research 
-                            by mapping connections and calculating similarity scores between drugs, genes, targets, and adverse effects, enhancing 
-                            efficiency and decision-making in pharmacology.</p>
-                        <a href="https://github.com/apiyarali/gradvek" class="btn btn-primary">View Project</a>
+    <section id="projects" class="container my-4">
+        <h2>Projects</h2>
+        <!-- Tabs navigation -->
+        <ul class="nav nav-tabs" id="projectsTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="featured-tab" data-bs-toggle="tab" href="#featured" role="tab" aria-controls="featured" aria-selected="true">Featured</a>
+            </li>
+            <li class="nav-item" role="presentation">
+            <a class="nav-link" id="ai-tab" data-bs-toggle="tab" href="#ai" role="tab" aria-controls="ai" aria-selected="false">AI</a>
+            </li>
+            <li class="nav-item" role="presentation">
+            <a class="nav-link" id="math-tab" data-bs-toggle="tab" href="#math" role="tab" aria-controls="math" aria-selected="false">Math</a>
+            </li>
+            <li class="nav-item" role="presentation">
+            <a class="nav-link" id="fintech-tab" data-bs-toggle="tab" href="#fintech" role="tab" aria-controls="fintech" aria-selected="false">Fintech</a>
+            </li>
+        </ul>
+    
+        <!-- Tabs content -->
+        <div class="tab-content mt-3" id="projectsTabsContent">
+            <!-- Featured Tab -->
+            <div class="tab-pane fade show active" id="featured" role="tabpanel" aria-labelledby="featured-tab">
+                <div class="row gy-4">
+                    <div class="col-md-4 d-flex flex-column">
+                        <div class="card border-dark">
+                            <img src="assets/drug_safety_knowledge_graph_card.jpg" class="card-img-top" alt="knowledge graph">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Drug Safety Knowledge Graph - Pfizer</h5>
+                                <p class="card-text"><strong>124,000 nodes and 68 million connections</strong></p>
+                                <p class="card-text flex-grow-1">A user-friendly knowledge graph that simplifies drug safety research 
+                                    by mapping connections and calculating similarity scores between drugs, genes, targets, and adverse effects, enhancing 
+                                    efficiency and decision-making in pharmacology.</p>
+                                <a href="https://github.com/apiyarali/gradvek" class="btn btn-primary">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-dark">
+                            <img src="assets/vr_operation_room_card.jpg" class="card-img-top" alt="vr operating room">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Virtual Reality Operating Room</h5>
+                                <p class="card-text flex-grow-1">VR operating room for medical education using Oculus, allowing student to 
+                                    simulate intricate healthcare settings, explore the environment, interact with objects, and 
+                                    build confidence.</p>
+                                <a href="https://github.com/apiyarali/Virtual-Reality-Operating-Room" class="btn btn-primary">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-dark">
+                            <img src="assets/transit_analytics_card.jpg" class="card-img-top" alt="transit analytics">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Transit Analytics</h5>
+                                <p class="card-text flex-grow-1">Generates a heatmap and CSV dataset of frequent transit stops using GTFS data, 
+                                    helping with resource allocation and service planning. Built with Scala and Spark for efficient 
+                                    data processing.</p>
+                                <a href="https://github.com/apiyarali/Transit-Analytics" class="btn btn-primary">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-dark">
+                            <img src="assets/protein_sequence_similarity_card.jpg" class="card-img-top" alt="protein sequence encoders">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Protein Sequence Similarity Deep Learning</h5>
+                                <p class="card-text flex-grow-1">Utilized encoders to encode protein sequences and trained a model to calculate 
+                                    similarity scores between amino acid sequences. This model aids in identifying drug targets, 
+                                    enhancing drug design, and minimizing off-target effects.</p>
+                                <a href="https://github.com/apiyarali/Protein-Sequence-Similarity-Deep-Learning" class="btn btn-primary">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-dark">
+                            <img src="assets/linear_programming_card.jpg" class="card-img-top" alt="linear programming">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Linear Programming</h5>
+                                <p class="card-text flex-grow-1">This R shiny app for solving Linear Programming Problems.</p>
+                                <a href="https://alipiyarali.shinyapps.io/LinearProgrammingFinal/" class="btn btn-primary">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-dark">
+                            <img src="assets/group_theory_card.jpg" class="card-img-top" alt="group theory">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Abstract Algebra Group Theory</h5>
+                                <p class="card-text flex-grow-1">Mathematical Group Theory demonstration apps in R Shiny Dashboard</p>
+                                <a href="https://github.com/apiyarali/GroupTheory-R?tab=readme-ov-file" class="btn btn-primary">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-dark">
+                            <img src="https://via.placeholder.com/300" class="card-img-top" alt="invoice">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Invoice App</h5>
+                                <p class="card-text flex-grow-1">A Python-based Django app for generating customer invoices with a 
+                                    built-in product and client database. Users can create profiles, add clients and products, 
+                                    select items from a dropdown when invoicing, generate PDFs for emailing, and mark invoices 
+                                    as paid.</p>
+                                <a href="project2.html" class="btn btn-primary">View Project</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card border-dark">
-                    <img src="assets/vr_operation_room_card.jpg" class="card-img-top" alt="vr operating room">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Virtual Reality Operating Room</h5>
-                        <p class="card-text flex-grow-1">VR operating room for medical education using Oculus, allowing student to 
-                            simulate intricate healthcare settings, explore the environment, interact with objects, and 
-                            build confidence.</p>
-                        <a href="https://github.com/apiyarali/Virtual-Reality-Operating-Room" class="btn btn-primary">View Project</a>
-                    </div>
-                </div>
+            <!-- AI Tab (empty for now) -->
+            <div class="tab-pane fade" id="ai" role="tabpanel" aria-labelledby="ai-tab">
+                <p>No projects in AI yet.</p>
             </div>
-            <div class="col-md-4">
-                <div class="card border-dark">
-                    <img src="assets/transit_analytics_card.jpg" class="card-img-top" alt="transit analytics">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Transit Analytics</h5>
-                        <p class="card-text flex-grow-1">Generates a heatmap and CSV dataset of frequent transit stops using GTFS data, 
-                            helping with resource allocation and service planning. Built with Scala and Spark for efficient 
-                            data processing.</p>
-                        <a href="https://github.com/apiyarali/Transit-Analytics" class="btn btn-primary">View Project</a>
-                    </div>
-                </div>
+
+            <!-- Math Tab (empty for now) -->
+            <div class="tab-pane fade" id="math" role="tabpanel" aria-labelledby="math-tab">
+                <p>No projects in Math yet.</p>
             </div>
-            <div class="col-md-4">
-                <div class="card border-dark">
-                    <img src="assets/protein_sequence_similarity_card.jpg" class="card-img-top" alt="protein sequence encoders">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Protein Sequence Similarity Deep Learning</h5>
-                        <p class="card-text flex-grow-1">Utilized encoders to encode protein sequences and trained a model to calculate 
-                            similarity scores between amino acid sequences. This model aids in identifying drug targets, 
-                            enhancing drug design, and minimizing off-target effects.</p>
-                        <a href="https://github.com/apiyarali/Protein-Sequence-Similarity-Deep-Learning" class="btn btn-primary">View Project</a>
-                    </div>
-                </div>
+
+            <!-- Fintech Tab (empty for now) -->
+            <div class="tab-pane fade" id="fintech" role="tabpanel" aria-labelledby="fintech-tab">
+                <p>No projects in Fintech yet.</p>
             </div>
-            <div class="col-md-4">
-                <div class="card border-dark">
-                    <img src="assets/linear_programming_card.jpg" class="card-img-top" alt="linear programming">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Linear Programming</h5>
-                        <p class="card-text flex-grow-1">This R shiny app for solving Linear Programming Problems.</p>
-                        <a href="https://alipiyarali.shinyapps.io/LinearProgrammingFinal/" class="btn btn-primary">View Project</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card border-dark">
-                    <img src="assets/group_theory_card.jpg" class="card-img-top" alt="group theory">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Abstract Algebra Group Theory</h5>
-                        <p class="card-text flex-grow-1">Mathematical Group Theory demonstration apps in R Shiny Dashboard</p>
-                        <a href="https://github.com/apiyarali/GroupTheory-R?tab=readme-ov-file" class="btn btn-primary">View Project</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card border-dark">
-                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="invoice">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Invoice App</h5>
-                        <p class="card-text flex-grow-1">A Python-based Django app for generating customer invoices with a 
-                            built-in product and client database. Users can create profiles, add clients and products, 
-                            select items from a dropdown when invoicing, generate PDFs for emailing, and mark invoices 
-                            as paid.</p>
-                        <a href="project2.html" class="btn btn-primary">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </div>      
     </section>
     
     <section id="blog" class="container my-5">
@@ -159,5 +195,7 @@
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
